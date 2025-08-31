@@ -1,0 +1,12 @@
+.userprofile-main {
+  flex: 1;             /* take remaining height between header/footer */
+  overflow-y: auto;    /* scrollable content */
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+.profile-title {
+  color: #ff4b2b;
+  font-size: 20px;
+  display: inline-block;
+}

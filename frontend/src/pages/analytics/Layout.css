@@ -1,0 +1,19 @@
+/* Main container adjusts for sidebar */
+.main-container {
+  margin-left: 220px;   /* same as sidebar width */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/* Page content below header */
+.page-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f2f5;
+  overflow-y: auto;
+
+  margin-top: 60px;   /* push down by header height */
+  box-sizing: border-box;
+}

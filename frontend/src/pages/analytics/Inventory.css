@@ -1,0 +1,40 @@
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f2f5;
+  overflow-y: auto;
+
+     /* push down by header height */
+  box-sizing: border-box;
+  left: 220px;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between; /* heading left, button right */
+  align-items: center;            /* vertical align */
+  gap: 12px;                      /* space between title & button */
+  flex-wrap: nowrap;              /* prevent wrapping to next line */
+}
+
+.inventory-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  white-space: nowrap; /* keep title in one line */
+}
+
+.export-btn {
+  background-color: #4CAF50; /* green */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+  flex-shrink: 0; /* don’t shrink the button */
+}
+

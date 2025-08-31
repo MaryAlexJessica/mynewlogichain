@@ -1,0 +1,81 @@
+/* Sidebar Container */
+.sidebar {
+  position: fixed;
+  top: 0;                /* cover from very top */
+  left: 0;
+  width: 220px;
+  height: 100%;          /* full height */
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;        /* takes up middle space */
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+
+/* Footer (Profile + Logout) */
+.sidebar-footer {
+  margin-top: auto;    /* stick footer at bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #444;
+}
+
+.sidebar-footer button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar-footer button:hover {
+  background: #e60000;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #333;
+}
+
+.sidebar ul li a.active-link {
+  background: #007bff; /* Highlight color */
+  font-weight: bold;
+  border-radius: 6px;
+}
