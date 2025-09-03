@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 import "../analytics/Login.css";
 import { getUser, saveUser } from "../../services/userProfileService";
-import { Roles } from "../../mock/Roles";
+import { roles } from "../../mock/Roles";
 
 const Signup = ({ onSignup }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [roleId, setRoleId] = useState(
-    Roles.find(r => r.role_name === "Customer").role_id); // default role
+    roles.find(r => r.role_name === "Customer").role_id); // default role
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
@@ -94,7 +94,7 @@ const Signup = ({ onSignup }) => {
             value={roleId}
             onChange={(e) => setRoleId(Number(e.target.value))}
           >
-            {Roles.map((role) => (
+            {roles.map((role) => (
               <option key={role.role_id} value={role.role_id}>
                 {role.role_name}
               </option>

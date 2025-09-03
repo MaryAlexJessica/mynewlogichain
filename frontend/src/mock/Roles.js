@@ -1,6 +1,6 @@
 // src/mock/Roles.js
 
-export const Roles = [
+export const roles = [
   {
     role_id: 1,
     role_name: "Admin",

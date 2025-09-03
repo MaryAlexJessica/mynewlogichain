@@ -1,10 +1,12 @@
 /* Sidebar Container */
 .sidebar {
   position: fixed;
-  top: 0;                /* cover from very top */
+  top: 0;
+  /* cover from very top */
   left: 0;
   width: 220px;
-  height: 100%;          /* full height */
+  height: 100vh;
+  /* full height */
   background-color: #000;
   color: #fff;
   display: flex;
@@ -23,11 +25,12 @@
 }
 
 /* Sidebar Menu */
-.sidebar ul {
+.sidebar-link {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;        /* takes up middle space */
+  flex-grow: 1;
+  /* takes up middle space */
 }
 
 .sidebar li {
@@ -41,7 +44,8 @@
 
 /* Footer (Profile + Logout) */
 .sidebar-footer {
-  margin-top: auto;    /* stick footer at bottom */
+  margin-top: auto;
+  /* stick footer at bottom */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,7 +79,8 @@
 }
 
 .sidebar ul li a.active-link {
-  background: #007bff; /* Highlight color */
+  background: #007bff;
+  /* Highlight color */
   font-weight: bold;
   border-radius: 6px;
 }

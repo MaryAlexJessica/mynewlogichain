@@ -1,11 +1,10 @@
 
 .page-content {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   background-color: #f0f2f5;
   overflow-y: auto;
-
-     /* push down by header height */
+  /* push down by header height */
   box-sizing: border-box;
   left: 220px;
 }
@@ -15,7 +14,8 @@
   justify-content: space-between; /* heading left, button right */
   align-items: center;            /* vertical align */
   gap: 12px;                      /* space between title & button */
-  flex-wrap: nowrap;              /* prevent wrapping to next line */
+  flex-wrap: nowrap; 
+               /* prevent wrapping to next line */
 }
 
 .inventory-title {
@@ -26,8 +26,8 @@
   white-space: nowrap; /* keep title in one line */
 }
 
-.export-btn {
-  background-color: #4CAF50; /* green */
+.btn {
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 8px 14px;
@@ -35,6 +35,122 @@
   cursor: pointer;
   font-size: 14px;
   transition: background 0.2s ease-in-out;
-  flex-shrink: 0; /* don’t shrink the button */
+  flex-shrink: 0;
+  line-height: 1.5;       /* ensure consistent height */
+  font-family: inherit;    /* inherit same font as container */
+  box-sizing: border-box;  /* include padding in height */
+  display: inline-flex;    /* aligns text vertically center */
 }
 
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.action-link {
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 4px;
+  text-decoration: underline;
+}
+
+.edit-link {
+  color: #007bff; /* blue for edit */
+}
+
+.edit-link:hover {
+  color: #0056b3;
+}
+
+.delete-link {
+  color: #dc3545; /* red for delete */
+}
+
+.delete-link:hover {
+  color: #a71d2a;
+}
+/* Make the actions column narrower */
+.table-wrapper table th:last-child,
+.table-wrapper table td:last-child {
+  width: 120px;   /* adjust as needed */
+  text-align: center;
+  white-space: nowrap; /* keep Edit | Delete in one line */
+}
+
+/* Match text input style */
+.input-field {
+  width: 28%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 25px;       /* matches input border radius */
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-right: 12px;
+}
+
+/* Hover / focus effect */
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+h1 {
+  margin-bottom: 40px; /* more space below heading */
+}
+.inventory-heading {
+  font-size: 30px;        /* Bigger font */
+  font-weight: 600;       /* Semi-bold */
+  margin-bottom: 25px;    /* Space below the heading */
+  color: #333;            /* Darker shade for better readability */
+}
+.add-form {
+  display: flex;
+  align-items: center;  /* vertical center all items */
+  gap: 12px;            /* space between inputs and button */
+  flex-wrap: wrap;      /* optional for smaller screens */
+}
+
+.add-form {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 12px;
+  flex-wrap: wrap;       /* optional */
+  margin-bottom: 20px;   /* space from table */
+}
+
+.add-form .input-field {
+  flex: 1;               /* inputs expand equally */
+  height: 40px;          /* fixed height */
+  min-width: 120px;
+  padding: 0 14px;    /* match button height */
+  border-radius: 6px;    /* match button */
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.add-form .addbtn {
+  background-color: #007bff;;
+  color: white;
+  height: 40px;           /* same as input height */
+  padding: 0 14px;        /* horizontal padding only */
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: auto;      /* push button to right */
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Push button to the right */
+.align-right {
+  margin-left: auto;
+}
+.add-form .addbtn:hover {
+  background-color: #0056b3;
+}
